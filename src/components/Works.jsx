@@ -26,7 +26,7 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-{360px} w-full"
       >
-        <div className="relative w-full h-[200px]">
+        <div className="relative w-full h-auto">
           <img
             src={image}
             alt="project_image"
@@ -98,4 +98,3 @@ const Works = () => {
 };
 
 export default SectionWrapper(Works, "");
-
