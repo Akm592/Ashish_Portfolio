@@ -7,6 +7,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+ import { useState, useEffect } from "react";
 
 const ProjectCard = ({
   index,
@@ -24,9 +25,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-full w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
       >
-        <div className="relative w-full h-auto">
+        <div className="relative w-full h-[100]">
           <img
             src={image}
             alt="project_image"
@@ -68,6 +69,20 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
   return (
     <>
       <motion.div variants={textVariant()}>
