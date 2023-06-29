@@ -47,7 +47,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
@@ -55,7 +55,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Ui/Ux Designer",
     icon: creator,
   },
 ];
@@ -139,7 +139,7 @@ const projects = [
   {
     name: "2-D Platformer game",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A visually appealing 2D platformer game made with Kaboom.js, ESBuild, and JavaScript. Avoid obstacles, collect bonuses, and complete levels.",
     tags: [
       {
         name: "react",
@@ -160,18 +160,18 @@ const projects = [
   {
     name: "Chatter Box",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Chatter Box is a chat application built with socket.io, React, and MongoDB. Connect with others, send/receive messages in real-time, and store conversations.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Socket.io",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "MongoDB",
         color: "pink-text-gradient",
       },
     ],
@@ -179,25 +179,25 @@ const projects = [
     source_code_link: "https://github.com/Akm592/Chatter-Box",
   },
   {
-    name: "Trip Guide",
+    name: "Personal Portfolio",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "The personal 3D portfolio website, created with React, Three.js, and Tailwind CSS, showcases stunning 3D models and artwork with a sleek and responsive design.",
     tags: [
       {
-        name: "nextjs",
+        name: "Reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "THREE JS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Akm592/Ashish_Portfolio",
   },
 ];
 
