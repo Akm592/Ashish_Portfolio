@@ -7,7 +7,7 @@ function Icons() {
     <div className="icons">
       <a   
         
-        href="https://github.com/yourusername"
+        href="https://github.com/Akm592"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -21,7 +21,7 @@ function Icons() {
         <FaLinkedin className="icon" />
       </a>
       <a
-        href="https://twitter.com/yourusername"
+        href="https://twitter.com/AKM957"
         target="_blank"
         rel="noopener noreferrer"
       >
