@@ -1,0 +1,19 @@
+
+.icon {
+    color: #ffffff;
+    font-size: 2em;
+    margin: 0 30px;
+    display: inline;
+    transition: all 0.2s ease-in-out;
+    animation: glow 2s ease-in-out infinite;
+    
+    
+}
+
+
+.icon:hover {
+    -webkit-box-shadow: 10px 10px 88px 5px rgba(6, 39, 189, 1);
+        -moz-box-shadow: 10px 10px 88px 5px rgba(6, 39, 189, 1);
+        box-shadow: 10px 10px 88px 5px rgba(6, 39, 189, 1);
+
+}   

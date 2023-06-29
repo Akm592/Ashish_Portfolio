@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(2.726513, 0, 0, 2.696654, -116.169315, -82.398318)" style="">
+    <g>
+      <text transform="matrix(1 0 0 1 38.0979 211.2222)" style="fill: rgb(53, 53, 53); font-family: Montserrat-Bold; font-size: 17.3607px; letter-spacing: 1px; white-space: pre;"> </text>
+      <text transform="matrix(1 0 0 1 68.7219 225.3282)" style="fill: rgb(107, 107, 107); font-family: Montserrat-Regular; font-size: 8.6804px; letter-spacing: 2px; white-space: pre;"> </text>
+      <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px;" transform="matrix(0.76297, 0, 0, 0.689314, 182.960342, 224.56839)"> </text>
+    </g>
+    <g>
+      <linearGradient id="SVGID_00000152982018397085897810000012770552718823024792_" gradientUnits="userSpaceOnUse" x1="102.1465" y1="174.7797" x2="123.6309" y2="122.47">
+        <stop offset="0" style="stop-color:#9B4F8F"/>
+        <stop offset="0.4091" style="stop-color:#733E84"/>
+        <stop offset="0.7884" style="stop-color:#54307B"/>
+        <stop offset="1" style="stop-color:#482B78"/>
+      </linearGradient>
+      <polygon style="fill:url(#SVGID_00000152982018397085897810000012770552718823024792_);" points="133.926,95.844 &#10;&#9;&#9;&#9;&#9;139.733,107.164 102.711,176.409 91.662,176.409 &#9;&#9;&#9;"/>
+      <linearGradient id="SVGID_00000029037193206833216750000009988961862342675618_" gradientUnits="userSpaceOnUse" x1="76.9721" y1="179.1543" x2="110.4987" y2="98.2598">
+        <stop offset="0" style="stop-color:#9B4F8F"/>
+        <stop offset="0.4091" style="stop-color:#733E84"/>
+        <stop offset="0.7884" style="stop-color:#54307B"/>
+        <stop offset="1" style="stop-color:#482B78"/>
+      </linearGradient>
+      <polygon style="fill:url(#SVGID_00000029037193206833216750000009988961862342675618_);" points="120.072,65.719 131.177,88.833 &#10;&#9;&#9;&#9;&#9;84.596,176.409 61.338,176.409 &#9;&#9;&#9;"/>
+      <linearGradient id="SVGID_00000067224402335793563490000002225278472914873480_" gradientUnits="userSpaceOnUse" x1="119.0289" y1="111.0986" x2="191.8841" y2="111.0986">
+        <stop offset="0" style="stop-color:#9B4F8F"/>
+        <stop offset="0.4091" style="stop-color:#733E84"/>
+        <stop offset="0.7884" style="stop-color:#54307B"/>
+        <stop offset="1" style="stop-color:#482B78"/>
+      </linearGradient>
+      <polygon style="fill:url(#SVGID_00000067224402335793563490000002225278472914873480_);" points="128.854,45.96 119.029,68.067 &#10;&#9;&#9;&#9;&#9;173.461,176.237 191.884,176.237 &#9;&#9;&#9;"/>
+    </g>
+  </g>
+</svg>
