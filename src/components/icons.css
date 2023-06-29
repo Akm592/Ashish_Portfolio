@@ -3,7 +3,7 @@
     color: #ffffff;
     font-size: 2em;
     margin: 0 30px;
-    display: inline;
+    display: inline-block;
     transition: all 0.2s ease-in-out;
     animation: glow 2s ease-in-out infinite;
     

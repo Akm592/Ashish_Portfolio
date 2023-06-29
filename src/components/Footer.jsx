@@ -1,6 +1,4 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
 import Icons from "./Icons";
 
 function Footer() {
@@ -10,10 +8,10 @@ function Footer() {
       <div className="footer bg-neutral-800 text-neutral-300 dark:bg-neutral-900 dark:text-neutral-200 z-10"></div>
 
       <footer className="bg-neutral-200 text-center text-white dark:bg-transparent z-2">
-        <div className="container pt-9">
-          <div className="mb-9 flex justify-center">
+        <div className="mt-9">
+
             <Icons />
-          </div>
+         
         </div>
 
         {/*Copyright section*/}

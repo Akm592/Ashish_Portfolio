@@ -41,7 +41,7 @@ const App = () => {
               <Navbar />
             </div>
             <About />
-            {/*<Experience />*/}
+            <Experience />  
             {/*<Tech />*/}
 
             <Works />
