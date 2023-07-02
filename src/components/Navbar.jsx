@@ -63,7 +63,7 @@ const Navbar = () => {
           ))}
           <li>
             <a
-              href="https://drive.google.com/file/d/167hpX1M4kq_clXKDl-PY-YARKJfnhRgY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1lYb5N-5CXPkwhHDxEzlFmgqkgVw4XZzn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
@@ -103,7 +103,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/167hpX1M4kq_clXKDl-PY-YARKJfnhRgY/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1lYb5N-5CXPkwhHDxEzlFmgqkgVw4XZzn/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-poppins font-medium cursor-pointer text-[16px] text-secondary"
