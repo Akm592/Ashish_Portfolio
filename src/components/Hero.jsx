@@ -45,11 +45,12 @@ function Hero() {
                     .typeString("Frontend Developer")
                     .pauseFor(200)
                     .deleteAll()
-                    .typeString("Graphic Designer")
+                    .typeString("Machine Learning Engineer")
                     .pauseFor(200)
                     .deleteAll()
                     .typeString("Freelancer")
                     .pauseFor(200)
+                    
 
                     .deleteAll()
                     .start();
