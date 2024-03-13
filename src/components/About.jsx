@@ -48,11 +48,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         <h1>
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+I'm a skilled software developer specializing in in-demand technologies like TypeScript, JavaScript, React, Node.js, Three.js, and machine learning. I'm a quick learner, passionate about collaborating with clients to build efficient, scalable, and intelligent solutions. Let's bring your project vision to life!
         </h1>
       </motion.p>
 
