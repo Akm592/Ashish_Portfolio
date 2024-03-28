@@ -59,14 +59,14 @@ const CustomGeometryParticles = (props) => {
     </points>
   );
 };
-const cameraPosition = [1, 2, 2];
+const cameraPosition = [2, 2, 2];
 function Rig() {
   const { camera, mouse } = useThree();
   const vec = new THREE.Vector3();
   return useFrame(() =>
     camera.position.lerp(
       vec.set(mouse.x * 2, mouse.y * 1, camera.position.z),
-      0.09
+      0.02
     )
   );
 }
@@ -74,7 +74,7 @@ function ParticleSphere() {
     return (
       <Canvas camera={{ position: cameraPosition }}>
           <ambientLight intensity={0.5} />
-          <CustomGeometryParticles count={10000} />
+          <CustomGeometryParticles count={4000} />
           <ambientLight />
           <OrbitControls
             position={[0, 0, 0]}
