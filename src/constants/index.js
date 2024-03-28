@@ -186,31 +186,8 @@ const projects = [
     source_code_link: "https://github.com/Akm592/Chatter-Box",
     live_link: "https://chatter-box-vh95.onrender.com/",
   },
+
   {
-    name: "Personal Portfolio",
-    description:
-      "The personal 3D portfolio website, created with React, Three.js, and Tailwind CSS, showcases stunning 3D models and artwork with a sleek and responsive design.",
-    description1:
-      "A visually appealing 2D platformer game made with Kaboom.js, ESBuild, and JavaScript. Avoid obstacles, collect bonuses, and complete levels.",
-    tags: [
-      {
-        name: "Reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "THREE JS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/Akm592/Ashish_Portfolio",
-    live_link: "https://ashishmishra.online/",
-  },
-    {
     name: "2048 Ai Solver",
     description:
       "A visual representation of the 2048 game with an AI solver built with Python and PyTorch .",
@@ -230,7 +207,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: TRT,
     source_code_link: "https://github.com/Akm592/2048_Ai",
   },
 
