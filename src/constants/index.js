@@ -210,6 +210,29 @@ const projects = [
     source_code_link: "https://github.com/Akm592/Ashish_Portfolio",
     live_link: "https://ashishmishra.online/",
   },
+    {
+    name: "2048 Ai Solver",
+    description:
+      "A visual representation of the 2048 game with an AI solver built with Python and PyTorch .",
+    description1:
+      "A visually appealing 2D platformer game made with Kaboom.js, ESBuild, and JavaScript. Avoid obstacles, collect bonuses, and complete levels.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PyTorch",
+        color: "green-text-gradient",
+      },
+      {
+        name: "DQN",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/Akm592/2048_Ai",
+  },
 
 ];
 
