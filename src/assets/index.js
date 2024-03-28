@@ -30,6 +30,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import chatterBox from "./chatterBox.png";
 import tripguide from "./tripguide.png";
+import Me from "./ashish.jpg"
+import TRT from "./1234.png"
 
 export {
   rgipt,
@@ -62,4 +64,6 @@ export {
   carrent,
   chatterBox,
   tripguide,
+  Me,
+  TRT,
 };

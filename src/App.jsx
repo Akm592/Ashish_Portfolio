@@ -34,18 +34,18 @@ const App = () => {
         <Preloader />
       ) : (
         <>
-          <AnimCursor />  
+          <AnimCursor />
           <div className="relative z-0 bg-primary">
             <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
               <Hero />
               <Navbar />
             </div>
             <About />
-            <Experience />  
+            <Experience />
             {/*<Tech />*/}
 
             <Works />
-            
+
             <div className="relative z-1">
               <Contact />
               {/*  */}
@@ -53,7 +53,7 @@ const App = () => {
             </div>
           </div>
           <div className="relative z-0">
-          <Footer />
+            <Footer />
           </div>
         </>
       )}

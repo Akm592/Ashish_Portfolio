@@ -54,8 +54,8 @@ const TextPoints = () => {
 
 const PointsCanvas = () => {
   return (
-    <div className="w-full h-screen fixed top-0 left-0 z-[-1]">
-      <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
+    <div className="w-full fixed top-0 left-0 z-[-1]">
+      <Canvas camera={{ position: [0, 0, 0], fov: 70 }}>
         <TextPoints />
       </Canvas>
     </div>

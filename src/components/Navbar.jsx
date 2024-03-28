@@ -9,10 +9,20 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Add this line
 
   useEffect(() => {
+    let lastScrollTop = 0;
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+      if (scrollTop > lastScrollTop) {
+        setIsVisible(false); // Hide navbar when scrolling down
+      } else {
+        setIsVisible(true); // Show navbar when scrolling up
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+
       if (scrollTop > 100) {
         setScrolled(true);
       } else {
@@ -29,11 +39,11 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-5 fixed top-0 z-20 font-jedi ${
         scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+      } ${isVisible ? "" : "hidden"}`} // Add this line
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto font-jedi">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -43,7 +53,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
+          <p className="text-white text-[25px] font-bold cursor-pointer flex font-jedi ">
             Ashish &nbsp;
             <span className="sm:block hidden"></span>
           </p>
@@ -54,8 +64,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-white" : "text-slate-400 "
+              } hover:text-white text-[20px] font-medium cursor-pointer font-jedi`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -66,7 +76,7 @@ const Navbar = () => {
               href="https://drive.google.com/file/d/1zmHasAV2K07zppmhYtni2ULmYsdv_Wu-/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
+              className="text-[18px] font-medium cursor-pointer text-slate-400 hover:text-white font-jedi"
             >
               Resume
             </a>
@@ -106,7 +116,7 @@ const Navbar = () => {
                   href="https://drive.google.com/file/d/1zmHasAV2K07zppmhYtni2ULmYsdv_Wu-/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-poppins font-medium cursor-pointer text-[16px] text-secondary"
+                  className=" font-medium cursor-pointer text-[16px] text-slate-400 hover:text-white"
                 >
                   Resume
                 </a>

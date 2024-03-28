@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'jedi';
+  src: url('../public/fonts/FastHand-lgBMV.ttf') format('truetype');
+  /* Add additional formats if needed */
+}
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +44,7 @@
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    #364150 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }

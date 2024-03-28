@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        gold: "#FFD700",
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
@@ -12,16 +13,25 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
       },
+
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
+      },
+      fontFamily: {
+        'jedi': ['"jedi"', "sans-serif"],
       },
       screens: {
         xs: "450px",
       },
-      backgroundColor:
-      {
-        "primary": "#000000",
-      }
+      backgroundColor: {
+        primary: "#000000",
+      },
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255, 255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255, 255, 0.2)",
+        ],
+      },
     },
   },
   plugins: [],

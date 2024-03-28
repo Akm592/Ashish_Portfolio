@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas} from './canvas';
+import { EarthCanvas,StarsCanvas} from './canvas';
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -12,6 +12,7 @@ import Footer from './Footer';
 import fragmentShader from './fragmentShader';
 import vertexShader from './vertexShader';
 import AnimCursor from './AnimCursor';  
+import Overlay from './Overlay';
 
 
 
@@ -30,8 +31,8 @@ export {
   Footer,
   CanvasLoader,
   EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
+
   StarsCanvas,
+  Overlay,
  
 };
