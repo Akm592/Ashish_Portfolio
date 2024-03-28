@@ -20,7 +20,7 @@ const ProjectCard = ({ index, project }) => {
         options={{ max: 45, scale: 1, speed: 450 }}
         className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50 border border-gray-100 backdrop-blur-sm p-5 sm:w-full "
       >
-        <div className="relative w-full h-[100]" onClick={handleClick}>
+        <div className="relative w-full h-auto" onClick={handleClick}>
           <img
             src={project.image}
             alt="project_image"
