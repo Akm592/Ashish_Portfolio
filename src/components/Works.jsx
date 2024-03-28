@@ -18,7 +18,7 @@ const ProjectCard = ({ index, project }) => {
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50 border border-gray-100 border- backdrop-blur-sm p-5 sm:w-[300px] w-full"
+        className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50 border border-gray-100 backdrop-blur-sm p-5 sm:w-full "
       >
         <div className="relative w-full h-[100]" onClick={handleClick}>
           <img
