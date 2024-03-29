@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-70 border border-gray-100 rounded-lg z-20">
+    <footer className="footer h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-70 border border-gray-100 rounded-lg z-20 z-20">
       {/* Social media icons */}
       <div className="flex justify-center mt-9">
         <a
