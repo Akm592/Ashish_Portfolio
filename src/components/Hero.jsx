@@ -20,7 +20,7 @@ function Hero() {
           <div>
             <h1 className={`${styles.heroHeadText} text-white font-jedi`}>
               Hi, I'm{" "}
-              <span className="text-transparent text-8xl bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600  font-jedi">
+              <span className="text-transparent text-8xl max-sm:text-[70px] bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600  font-jedi">
                 Ashish
               </span>
             </h1>
