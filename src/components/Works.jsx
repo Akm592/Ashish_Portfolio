@@ -24,7 +24,9 @@ const ProjectCard = ({ index, project }) => {
   };
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} 
+        onClick={handleClick}
+      >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
         className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50 border border-gray-100 border- backdrop-blur-sm p-5 sm:w-[300px] w-full"
