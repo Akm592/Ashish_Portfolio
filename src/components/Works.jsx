@@ -9,6 +9,15 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ index, project }) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    setIsOverlayVisible(false);
+  };
+
 
   const handleClick = () => {
     setIsOverlayVisible(!isOverlayVisible);
@@ -18,13 +27,13 @@ const ProjectCard = ({ index, project }) => {
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter  bg-opacity-50 border border-gray-100 border- backdrop-blur-sm p-5 sm:w-[300px]"
+        className="h-full w-full bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-50 border border-gray-100 border- backdrop-blur-sm p-5 sm:w-[300px] w-full"
       >
         <div className="relative w-full h-[100]" onClick={handleClick}>
           <img
             src={project.image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-auto h-full object-cover rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
@@ -70,7 +79,7 @@ const Overlay = ({ project, onClose }) => {
       className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-10 "
       onClick={onClose}
     >
-      <div className=" bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-gray-100 rounded-lg p-8 max-w-max h-5/6">
+      <div className=" bg-gray-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-70 border border-gray-100 rounded-lg p-8 max-w-max h-5/6">
         <div className="relative">
           <img
             src={project.image}
@@ -167,3 +176,4 @@ const Works = () => {
 };
 
 export default SectionWrapper(Works, "");
+
