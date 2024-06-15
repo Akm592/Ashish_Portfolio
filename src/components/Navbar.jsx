@@ -113,7 +113,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1ej1_luCsaTGujA2pzB3youi7A-Nl7JJU/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/10zWoS9pA2BAdNwLAx8tSKZ7w6TibY05A/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" font-medium cursor-pointer text-[16px] text-slate-400 hover:text-white"
