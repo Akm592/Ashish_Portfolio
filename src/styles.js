@@ -16,7 +16,7 @@ const styles = {
   // Add styling for Navbar and its elements
   navbar: "font-jedi", // Assuming 'JediFont' is the name you gave in @font-face
   navbarList: "",
-  navbarLink: "hover:text-white",
+  navbarLink: "hover:text-white z-999999",
 };
 
 export { styles };

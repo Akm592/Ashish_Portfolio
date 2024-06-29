@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.70.0",
     "@react-three/fiber": "^8.13.0",
+    "canvas-sketch-util": "^1.10.0",
     "framer-motion": "^10.12.16",
     "gsap": "^3.11.5",
     "maath": "^0.6.0",

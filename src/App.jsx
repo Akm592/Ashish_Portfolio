@@ -1,32 +1,30 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {
   About,
   Contact,
   Experience,
-  Feedbacks,
+  // Feedbacks, // Not used in this code, remove if unnecessary
   Hero,
   Navbar,
-  Tech,
+  // Tech, // Not used in this code, remove if unnecessary
   Works,
   StarsCanvas,
   Footer,
   AnimCursor,
 } from "./components";
+import FlockingPage from "./components/FlockingPage";
 import Preloader from "./components/Preloader";
-import Test from "./components/Test";
 
 const App = () => {
+  const [loading, setLoading] = useState(false);
 
-
- const [loading, setLoading] = useState(false);
-
- useEffect(() => {
-   setLoading(true);
-   setTimeout(() => {
-     setLoading(false);
-   }, 4000);
- }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -35,23 +33,28 @@ const App = () => {
       ) : (
         <>
           <AnimCursor />
-          <div className="relative z-0 bg-primary">
-            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-              <Hero />
-              <Navbar />
-            </div>
-            <About />
-            <Experience />
-            {/*<Tech />*/}
-
-            <Works />
-
-            <div className="relative z-1">
-              <Contact />
-              {/*  */}
-              <StarsCanvas />
-            </div>
-          </div>
+          <Navbar />{" "}
+          {/* Navbar is outside the Routes component to be always visible */}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="relative z-0 bg-primary">
+                  <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                    <Hero />
+                  </div>
+                  <About />
+                  <Experience />
+                  <Works />
+                  <div className="relative z-1">
+                    <Contact />
+                    <StarsCanvas />
+                  </div>
+                </div>
+              }
+            />
+            <Route path="/flocking" element={<FlockingPage />} />
+          </Routes>
           <div className="relative z-0">
             <Footer />
           </div>
@@ -62,4 +65,3 @@ const App = () => {
 };
 
 export default App;
-
