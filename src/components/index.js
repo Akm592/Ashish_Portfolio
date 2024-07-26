@@ -13,6 +13,7 @@ import fragmentShader from './fragmentShader';
 import vertexShader from './vertexShader';
 import AnimCursor from './AnimCursor';  
 import Overlay from './Overlay';
+import FlappyBirdGame from './FlappyBirdGame';
 
 
 
@@ -31,7 +32,7 @@ export {
   Footer,
   CanvasLoader,
   EarthCanvas, 
-
+ FlappyBirdGame,
   StarsCanvas,
   Overlay,
  

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import {
   About,
   Contact,
@@ -12,6 +12,7 @@ import {
   StarsCanvas,
   Footer,
   AnimCursor,
+  FlappyBirdGame
 } from "./components";
 import FlockingPage from "./components/FlockingPage";
 import Preloader from "./components/Preloader";
@@ -54,6 +55,7 @@ const App = () => {
               }
             />
             <Route path="/flocking" element={<FlockingPage />} />
+            <Route path="/flappy-bird" element={<FlappyBirdGame />} />
           </Routes>
           <div className="relative z-0">
             <Footer />

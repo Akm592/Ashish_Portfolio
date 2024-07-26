@@ -1,4 +1,4 @@
-import FlockingAlgorithm from "./canvas/FlockingAlgorithm";
+
 import ChaoticParticleAnimation from "./canvas/NameAnimation";
 
 const FlockingPage = () => {

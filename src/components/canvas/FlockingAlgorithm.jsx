@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useMemo } from "react";
 import { Canvas, useFrame, extend } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls, Effects } from "@react-three/drei";
-import Random from "canvas-sketch-util/random";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 
 extend({ UnrealBloomPass });
@@ -61,9 +60,9 @@ class Boid {
   constructor(initialPosition) {
     this.position = initialPosition || new THREE.Vector3();
     this.velocity = new THREE.Vector3(
-      Random.range(-0.1, 0.1),
-      Random.range(-0.1, 0.1),
-      Random.range(-0.1, 0.1)
+      Math.random() * 0.2 - 0.1,
+      Math.random() * 0.2 - 0.1,
+      Math.random() * 0.2 - 0.1
     );
     this.acceleration = new THREE.Vector3();
   }
@@ -92,6 +91,7 @@ class Boid {
   }
 
   align(boids) {
+    const steering = new  align(boids) {
     const steering = new THREE.Vector3();
     let total = 0;
     for (const other of boids) {
@@ -170,28 +170,19 @@ const FlockingParticles = () => {
   const boids = useMemo(() => {
     return Array.from({ length: boidCount }, () => {
       const position = new THREE.Vector3(
-        Random.range(-5, 5),
-        Random.range(-5, 5),
-        Random.range(-5, 5)
+        Math.random() * 10 - 5,
+        Math.random() * 10 - 5,
+        Math.random() * 10 - 5
       );
       return new Boid(position);
     });
   }, []);
 
-  const positions = useMemo(() => {
-    return Float32Array.from(boids.flatMap((boid) => boid.position.toArray()));
-  }, [boids]);
-
   useFrame((state) => {
     boids.forEach((boid) => boid.update(boids));
 
-    const pointsPositions =
-      pointsRef.current.geometry.attributes.position.array;
-    for (let i = 0; i < boidCount; i++) {
-      pointsPositions[i * 3 + 0] = boids[i].position.x;
-      pointsPositions[i * 3 + 1] = boids[i].position.y;
-      pointsPositions[i * 3 + 2] = boids[i].position.z;
-    }
+    const positions = boids.flatMap((boid) => boid.position.toArray());
+    pointsRef.current.geometry.attributes.position.array = positions;
     pointsRef.current.geometry.attributes.position.needsUpdate = true;
 
     GlowingBoidMaterial.uniforms.uTime.value = state.clock.getElapsedTime();
@@ -201,14 +192,12 @@ const FlockingParticles = () => {
     <points ref={pointsRef}>
       <bufferGeometry>
         <bufferAttribute
-         
-          array={positions}
-          count={positions.length / 3}
+          array={new Float32Array(boidCount * 3)}
+          count={boidCount}
           itemSize={3}
         />
       </bufferGeometry>
-      <shaderMaterial
-        uniforms={GlowingBoidMaterial.uniforms}
+      <meshBasicMaterial
         vertexShader={GlowingBoidMaterial.vertexShader}
         fragmentShader={GlowingBoidMaterial.fragmentShader}
         transparent={true}
