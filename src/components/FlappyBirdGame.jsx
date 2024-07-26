@@ -4,8 +4,9 @@ const FlappyBirdGame = () => {
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
 
-  const canvasWidth = screenWidth < 768 ? 400 : 800; // adjust values as needed
-  const canvasHeight = screenHeight < 768 ? 300 : 600; // adjust values as needed
+  const canvasWidth = screenWidth < 768 ? 400 : 800;
+  const canvasHeight = screenHeight < 768 ? 300 : 600;
+
   const canvasRef = useRef(null);
   const gameRef = useRef({
     birdY: 0,
@@ -15,6 +16,7 @@ const FlappyBirdGame = () => {
     gameOver: false,
     gameStarted: false,
   });
+
   const [, forceUpdate] = useState({});
 
   const updateScore = useCallback(() => {
@@ -24,19 +26,19 @@ const FlappyBirdGame = () => {
 
   useEffect(() => {
     if (!canvasRef.current) return;
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
+
     let animationFrameId;
 
-    // Game variables
     const birdSize = 30;
     const gravity = 0.25;
     const jumpStrength = -4.5;
     const pipeWidth = 60;
-    const pipeGap = 160;
+    const pipeGap = 180;
     const gameSpeed = 2;
 
-    // Colors
     const skyColor = "#87CEEB";
     const birdColor = "#FFFF00";
     const pipeColor = "#2ECC71";
@@ -101,7 +103,6 @@ const FlappyBirdGame = () => {
       game.pipes.forEach((pipe, index) => {
         pipe.x -= gameSpeed;
 
-        // Check collision
         if (
           100 < pipe.x + pipeWidth &&
           100 + birdSize > pipe.x &&
@@ -112,13 +113,11 @@ const FlappyBirdGame = () => {
           forceUpdate({});
         }
 
-        // Increase score
         if (!pipe.scored && pipe.x + pipeWidth < 100) {
           pipe.scored = true;
           updateScore();
         }
 
-        // Reposition pipe when it's off-screen
         if (pipe.x + pipeWidth < 0) {
           const lastPipe = game.pipes[game.pipes.length - 1];
           game.pipes[index] = {
@@ -128,7 +127,6 @@ const FlappyBirdGame = () => {
         }
       });
 
-      // Check if bird is out of bounds
       if (
         game.birdY > canvas.height - birdSize / 2 ||
         game.birdY < birdSize / 2
@@ -153,11 +151,7 @@ const FlappyBirdGame = () => {
         ctx.fillStyle = "black";
         ctx.font = "bold 30px Arial";
         ctx.textAlign = "center";
-        ctx.fillText(
-          "Tap or Press Space to Start",
-          canvas.width / 2,
-          canvas.height / 2
-        );
+       ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         ctx.textAlign = "left";
       }
 
@@ -235,18 +229,18 @@ const FlappyBirdGame = () => {
     };
   }, [updateScore]);
 
-return (
-  <div className="flex justify-center items-center h-screen">
-    {canvasWidth && canvasHeight && (
-      <canvas
-        ref={canvasRef}
-        width={canvasWidth}
-        height={canvasHeight}
-        className="border-4 border-black rounded-lg"
-      />
-    )}
-  </div>
-);
+  return (
+    <div className="flex justify-center items-center h-screen">
+      {canvasWidth && canvasHeight && (
+        <canvas
+          ref={canvasRef}
+          width={canvasWidth}
+          height={canvasHeight}
+          className="border-4 border-black rounded-lg"
+        />
+      )}
+    </div>
+  );
 };
 
 export default FlappyBirdGame;
