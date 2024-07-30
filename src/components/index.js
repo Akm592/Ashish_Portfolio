@@ -14,6 +14,7 @@ import vertexShader from './vertexShader';
 import AnimCursor from './AnimCursor';  
 import Overlay from './Overlay';
 import FlappyBirdGame from './FlappyBirdGame';
+import CityVisualization from './AStarAlgoVis'; 
 
 
 
@@ -35,5 +36,6 @@ export {
  FlappyBirdGame,
   StarsCanvas,
   Overlay,
+  CityVisualization
  
 };
