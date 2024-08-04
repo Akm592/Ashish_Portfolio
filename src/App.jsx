@@ -12,9 +12,16 @@ import {
   StarsCanvas,
   Footer,
   AnimCursor,
-  FlappyBirdGame
+
+
+
+  FlappyBirdGame,
+  MapPage
+
+
 } from "./components";
 import FlockingPage from "./components/FlockingPage";
+
 import Preloader from "./components/Preloader";
 
 const App = () => {
@@ -56,6 +63,9 @@ const App = () => {
             />
             <Route path="/flocking" element={<FlockingPage />} />
             <Route path="/flappy-bird" element={<FlappyBirdGame />} />
+
+            <Route path="/astar" element={<MapPage />} />
+
           </Routes>
           <div className="relative z-0">
             <Footer />

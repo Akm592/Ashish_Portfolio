@@ -15,6 +15,10 @@ import AnimCursor from './AnimCursor';
 import Overlay from './Overlay';
 import FlappyBirdGame from './FlappyBirdGame';
 
+import CityVisualization from './AStarAlgoVis'; 
+import MapPage from './mapPage';
+
+
 
 
 export {
@@ -35,5 +39,10 @@ export {
  FlappyBirdGame,
   StarsCanvas,
   Overlay,
+
+
+  CityVisualization,
+  MapPage
+
  
 };
