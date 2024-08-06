@@ -1,28 +1,38 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {
   About,
   Contact,
   Experience,
-  // Feedbacks, // Not used in this code, remove if unnecessary
   Hero,
   Navbar,
-  // Tech, // Not used in this code, remove if unnecessary
   Works,
   StarsCanvas,
   Footer,
   AnimCursor,
-
-
-
   FlappyBirdGame,
-  MapPage
-
-
+  MapPage,
 } from "./components";
 import FlockingPage from "./components/FlockingPage";
-
 import Preloader from "./components/Preloader";
+import FunProjects from "./components/FunProjects";
+const ScrollManager = ({ children }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/astar") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [location]);
+
+  return children;
+};
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -36,42 +46,66 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {loading ? (
-        <Preloader />
-      ) : (
-        <>
-          <AnimCursor />
-          <Navbar />{" "}
-          {/* Navbar is outside the Routes component to be always visible */}
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="relative z-0 bg-primary">
-                  <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                    <Hero />
+      <ScrollManager>
+        {loading ? (
+          <Preloader />
+        ) : (
+          <>
+            <AnimCursor />
+            <Navbar />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <div className="relative z-0 bg-primary">
+                      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                        <Hero />
+                      </div>
+                      <About />
+                      <Experience />
+                      <Works />
+                      <FunProjects />
+                      <div className="relative z-1">
+                        <Contact />
+                        <StarsCanvas />
+                      </div>
+                    </div>
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/fun" element={<FunProjects />} />
+              <Route
+                path="/flocking"
+                element={
+                  <>
+                    <FlockingPage />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/flappybird"
+                element={
+                  <>
+                    <FlappyBirdGame />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/pathfinder"
+                element={
+                  <div className="overflow:hidden">
+                    <MapPage />
                   </div>
-                  <About />
-                  <Experience />
-                  <Works />
-                  <div className="relative z-1">
-                    <Contact />
-                    <StarsCanvas />
-                  </div>
-                </div>
-              }
-            />
-            <Route path="/flocking" element={<FlockingPage />} />
-            <Route path="/flappy-bird" element={<FlappyBirdGame />} />
-
-            <Route path="/astar" element={<MapPage />} />
-
-          </Routes>
-          <div className="relative z-0">
-            <Footer />
-          </div>
-        </>
-      )}
+                }
+              />
+            </Routes>
+          </>
+        )}
+      </ScrollManager>
     </BrowserRouter>
   );
 };

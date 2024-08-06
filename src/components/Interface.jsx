@@ -179,12 +179,15 @@ const Interface = forwardRef(
                   >
                     <option value="astar">A* algorithm</option>
                     <option value="greedy">Greedy algorithm</option>
-                    <option value="dijkstra">Dijkstra's algorithm</option>
+                    <option value="dijkstra">Dijkstra algorithm</option>
                     <option value="bidirectional">
                       Bidirectional Search algorithm
                     </option>
-                    <option value="bellmanford">Bellman-Ford algorithm</option>
+                    {/* <option value="bellmanford">Bellman-Ford algorithm</option>
                     <option value="floydwarshall">Floyd-Warshall algorithm</option>
+                    <option value="jump">Jump Point Search algorithm</option>
+                    <option value="bidirectionalAstar"> Bidirectional A* algorithm</option>  */}
+
                   </select>
                 </div>
                 <div>

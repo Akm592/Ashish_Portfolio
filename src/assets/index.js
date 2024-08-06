@@ -30,8 +30,11 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import chatterBox from "./chatterBox.png";
 import tripguide from "./tripguide.png";
-import Me from "./ashish.jpg"
-import TRT from "./1234.png"
+import Me from "./ashish.jpg";
+import TRT from "./1234.png";
+import fun1 from "./fun1.png";
+import fun2 from "./fun2.png";
+import fun3 from "./fun3.png";
 
 export {
   rgipt,
@@ -66,4 +69,7 @@ export {
   tripguide,
   Me,
   TRT,
+  fun1,
+  fun2,
+  fun3,
 };
