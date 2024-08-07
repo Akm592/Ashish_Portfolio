@@ -78,28 +78,28 @@ const ProjectCard = ({ title, description, image, link, index }) => {
 const FunProjects = () => {
   const projects = [
     {
-      title: "Cosmic Flocking",
+      title: "Simulation",
+
       description:
-        "Witness the mesmerizing dance of celestial bodies in this immersive simulation.",
+        "Explore and interact with stunning 3D models in this immersive environment.",
       image: fun1,
       link: "/flocking",
     },
     {
-      title: "Nebula Navigator",
+      title: "Flappybird",
       description:
-        "Pilot your spacecraft through treacherous nebulae in this thrilling space adventure.",
+        "Test your skills in this addictive Flappy Bird game set in a nebula environment.",
       image: fun2,
       link: "/flappybird",
     },
     {
-      title: "Quantum Pathfinder",
+      title: "Pathfinder",
       description:
-        "Unravel the mysteries of quantum space-time and chart impossible courses across the universe.",
+        "Visualize and explore famous pathfinding algorithms like A* on real-time maps.",
       image: fun3,
       link: "/pathfinder",
     },
   ];
-
   const sectionRef = useRef(null);
 
   useEffect(() => {

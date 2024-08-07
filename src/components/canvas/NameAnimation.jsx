@@ -2,33 +2,34 @@ import React, { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
+import ControlPanel  from "./ControlPanel";
 
-const ControlPanel = ({ shape, setShape }) => {
-  return (
-    <div
-      style={{
-        position: "relative",
-        top: 500,
-        zIndex: 1000,
-        background: "rgba(0,0,0,0.7)",
-        padding: 10,
-        borderRadius: 5,
-      }}
-    >
-      <select
-        value={shape}
-        onChange={(e) => setShape(e.target.value)}
-        style={{ padding: 5 }}
-      >
-        <option value="sphere">Sphere</option>
-        <option value="spiral">Spiral</option>
-        <option value="cube">Cube</option>
-        <option value="cylinder">Cylinder</option>
-        <option value="spring">Spring</option>
-      </select>
-    </div>
-  );
-};
+// const ControlPanel = ({ shape, setShape }) => {
+//   return (
+//     <div
+//       style={{
+//         position: "relative",
+//         top: 500,
+//         zIndex: 1000,
+//         background: "rgba(0,0,0,0.7)",
+//         padding: 10,
+//         borderRadius: 5,
+//       }}
+//     >
+//       <select
+//         value={shape}
+//         onChange={(e) => setShape(e.target.value)}
+//         style={{ padding: 5 }}
+//       >
+//         <option value="sphere">Sphere</option>
+//         <option value="spiral">Spiral</option>
+//         <option value="cube">Cube</option>
+//         <option value="cylinder">Cylinder</option>
+//         <option value="spring">Spring</option>
+//       </select>
+//     </div>
+//   );
+// };
 
 const Particles = ({ count, isChaoticMode, shape }) => {
   const mesh = useRef();
@@ -206,7 +207,12 @@ const ChaoticParticleAnimation = () => {
 
   return (
     <>
-      <ControlPanel shape={shape} setShape={setShape} />
+      <ControlPanel
+        shape={shape}
+        setShape={setShape}
+        isChaoticMode={isChaoticMode}
+        setIsChaoticMode={setIsChaoticMode}
+      />
       <Canvas
         camera={{ position: [0, 0, 300], fov: 75 }}
         onClick={handleCanvasClick}
