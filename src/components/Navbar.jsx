@@ -154,7 +154,7 @@ const Navbar = () => {
               ))}
               <li className="nav-link">
                 <a
-                  href="https://drive.google.com/file/d/10zWoS9pA2BAdNwLAx8tSKZ7w6TibY05A/view?usp=drivesdk"
+                  href="https://drive.google.com/file/d/1vp-26MLxhbzcyXBRftmmnPclwl9ZHEQK/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-white cursor-pointer font-jedi"
